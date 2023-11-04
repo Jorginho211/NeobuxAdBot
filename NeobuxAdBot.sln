@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34212.112
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeobuxAdBot", "NeobuxAdBot\NeobuxAdBot.csproj", "{BB243CE4-5865-4F29-B022-7531980A29E2}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{9342648D-7BCF-4EC8-96F3-D92E70DA3129}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB243CE4-5865-4F29-B022-7531980A29E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB243CE4-5865-4F29-B022-7531980A29E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB243CE4-5865-4F29-B022-7531980A29E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB243CE4-5865-4F29-B022-7531980A29E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9342648D-7BCF-4EC8-96F3-D92E70DA3129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9342648D-7BCF-4EC8-96F3-D92E70DA3129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9342648D-7BCF-4EC8-96F3-D92E70DA3129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9342648D-7BCF-4EC8-96F3-D92E70DA3129}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17293133-D7C2-47AD-B46E-46919D002DD9}
+	EndGlobalSection
+EndGlobal

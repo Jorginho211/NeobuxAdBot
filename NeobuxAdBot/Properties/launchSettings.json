@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NeobuxAdBot": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

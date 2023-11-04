@@ -1,0 +1,20 @@
+version: '3.4'
+name: neobuxadbot
+services:
+  selenium:
+    image: selenium/standalone-firefox:110.0
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    environment:
+      - SE_NODE_SESSION_TIMEOUT=60
+
+  neobuxadbot:
+    image: ${DOCKER_REGISTRY-}neobuxadbot
+    build:
+      context: .
+      dockerfile: NeobuxAdBot/Dockerfile
+    links: 
+      - selenium
+    depends_on:
+      - selenium
