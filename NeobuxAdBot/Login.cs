@@ -11,6 +11,8 @@ namespace NeobuxAdBot
         private const string CAPTCHA_XPATH = "//*[@id=\"Kf3\"]";
         private const string LOGIN_BTN_XPATH = "//*[@id=\"botao_login\"]";
 
+        private const int CAPTCHA_CHECK_SECONDS_WAIT = 1; 
+
         private readonly IWebDriver _driver;
         private readonly IConfiguration _configuration;
 
@@ -37,7 +39,7 @@ namespace NeobuxAdBot
                 Console.WriteLine("Captcha Required: Need to be inserted manually");
                 while(_driver.Url.Contains("m/l/?vl"))
                 {
-                    await Task.Delay(1000);
+                    await Task.Delay(TimeSpan.FromSeconds(CAPTCHA_CHECK_SECONDS_WAIT));
                 }
 
                 return;
