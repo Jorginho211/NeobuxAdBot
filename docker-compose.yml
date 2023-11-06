@@ -2,6 +2,7 @@ version: '3.4'
 name: neobuxadbot
 services:
   selenium:
+    container_name: selenium
     image: selenium/standalone-firefox:110.0
     ports:
       - "4444:4444"
@@ -10,6 +11,7 @@ services:
       - SE_NODE_SESSION_TIMEOUT=60
 
   neobuxadbot:
+    container_name: neobuxadbot
     image: ${DOCKER_REGISTRY-}neobuxadbot
     build:
       context: .
