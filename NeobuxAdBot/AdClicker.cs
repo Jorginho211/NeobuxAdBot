@@ -19,18 +19,20 @@ namespace NeobuxAdBot
 
         public async Task Perform()
         {
+            var random = new Random();
             _driver.FindElement(By.XPath(MENU_XPATH)).Click();
-            await Task.Delay(TimeSpan.FromSeconds(1));
+            await Task.Delay(TimeSpan.FromSeconds(random.NextInt64(1, 3)));
 
             var activeAdsElems = _driver.FindElements(By.CssSelector(ACTIVE_ADS_CLASSNAME));
             Console.WriteLine($"Found {activeAdsElems.Count} ads to click");
+            await Task.Delay(TimeSpan.FromSeconds(random.NextInt64(1, 3)));
 
             var mainWindowHandler = _driver.CurrentWindowHandle;
 
             foreach(var activeAd in activeAdsElems)
             {
                 activeAd.Click();
-                await Task.Delay(TimeSpan.FromSeconds(1));
+                await Task.Delay(TimeSpan.FromSeconds(random.NextInt64(1, 3)));
 
                 var redCircle = activeAd.FindElement(By.TagName(RED_CIRCLE_TAG));
                 redCircle.Click();
@@ -39,6 +41,7 @@ namespace NeobuxAdBot
                 var lastWindowHandler = _driver.WindowHandles.Last();
                 _driver.SwitchTo().Window(lastWindowHandler);
                 _driver.Close();
+                await Task.Delay(TimeSpan.FromSeconds(random.NextInt64(1, 3)));
 
                 _driver.SwitchTo().Window(mainWindowHandler);
             }
