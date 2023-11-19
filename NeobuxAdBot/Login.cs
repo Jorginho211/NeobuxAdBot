@@ -42,11 +42,13 @@ namespace NeobuxAdBot
                     await Task.Delay(TimeSpan.FromSeconds(CAPTCHA_CHECK_SECONDS_WAIT));
                 }
 
+                await Task.Delay(TimeSpan.FromSeconds(2));
                 return;
             }
 
             var btnLoginElem = _driver.FindElement(By.XPath(LOGIN_BTN_XPATH));
             btnLoginElem.Click();
+            await Task.Delay(TimeSpan.FromSeconds(2));
         }
     }
 }
